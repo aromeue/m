@@ -7,7 +7,8 @@
         
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- width=device-width, height=device-height, -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
         
         <link rel="stylesheet" href="index.css" /> 
         
@@ -17,35 +18,65 @@
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
     
-       	<!--
-        	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
-        -->
-        
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-        
+       	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 		<script type="text/javascript" charset="utf-8" src="index.js"></script>
 
         <style type="text/css">
-		 #flash {
-			background:url(http://www.clinicasguanganmen.es/m/img/flash.png) top center no-repeat #FFF;
-			background-size:auto 100%;
-		 }
+			.boto {
+				width:33%;
+				float:left;
+				font-size:0.8em;
+				font-weight:bold;
+				text-align:center;
+			}
+			.boto img {
+				max-width:60%;
+			}
 		</style>
-        
-        <meta http-equiv="refresh" content="2;URL=main.html">
-
 	</head>
+    
 	<body>
-    	<div id="flash"> </div>
-        <div id="datos"> </div>
+		<div data-role="page" data-theme="b">
+			<div data-role="header" style="overflow:hidden;">
+	            <h1>Guang An Men</h1>
+            </div>
+            
+            <div id="slide"> </div>
+            
+            <div role="main" class="" style="margin-top:20px;">
+                <div>
+                	<a href="quienes.html">
+                    <div class="boto">
+                        <img src="img/logo.fw.png" />
+                        <p>¿Quienes somos?</p>
+                    </div>
+                    </a>
+                </div>
+                
+                <div>
+                	<a href="especialidades.html">
+                    <div class="boto">
+	                    <img src="img/especialidades.png" />
+                        <p>Especialidades</p>
+                    </div>
+                    </a>
+                </div>
+                
+                <div>
+                    <div class="boto">
+                        <p>¿Qué es la MTC?</p>
+                    </div>
+                </div>                
+                
+			</div>
+            
+
+	        <div id="datos"> </div>
+
+			<script>		
+                $('#datos').html('Screen Height:'+screen.height+'<br>Screen Width:'+screen.width+'<br><br>Window Outer Height:'+window.outerHeight+'<br>Window Outer Width:'+window.outerWidth+'<br><br>Window Height:'+window.height+'<br>Window Width:'+window.width);
+            </script>
+            
+		</div>
 	</body>
-    <script>		
-		/*
-		$(window).on("orientationchange",function(){
-			$('#flash').css('background','url(http://www.clinicasguanganmen.es/m/img/flash-h.png) top center no-repeat #FFF');
-		});
-		*/
-		$('#flash').css('height', window.outerHeight);
-		//$('#datos').html('Height:'+screen.height+'<br>Width:'+screen.width+'<br><br>Height:'+window.outerHeight+'<br>Width:'+window.outerWidth);
-	</script>
 </html>
