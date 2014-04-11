@@ -64,9 +64,32 @@
       			<img id="cameraImage" src="" />
                 
                 
+                <hr>
+                
+                <div class="ui-grid-b">
+					<div class="ui-block-a"><div data-role="button" onclick="captureAudio();">Audio</div></div>
+					<div class="ui-block-b"><div data-role="button" onclick="captureImage();">Image</div></div>
+					<div class="ui-block-c"><div data-role="button" onclick="captureVideo();">Video</div></div>
+				</div>				
+				<div>Capture Result: <span id="capture-result"></span><br/>
+				<span id="format-data"></span><br/>
+				</div>
+                
 			</div>
             
 		</div>
-        <script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
+    <script type="text/javascript" charset="utf-8" src="apis/accelerometer.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/capture.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/compass.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/connection.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/contacts.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/device.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/events.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/file.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/geolocation.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/media.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/notification.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/storage.js"></script>
 	</body>
 </html>
