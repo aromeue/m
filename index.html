@@ -17,7 +17,12 @@
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
     
-       	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+       	<!--
+        	<script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+        -->
+        
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        
 		<script type="text/javascript" charset="utf-8" src="index.js"></script>
 
         <style type="text/css">
@@ -35,9 +40,11 @@
         <div id="datos"> </div>
 	</body>
     <script>		
+		/*
 		$(window).on("orientationchange",function(){
 			$('#flash').css('background','url(http://www.clinicasguanganmen.es/m/img/flash-h.png) top center no-repeat #FFF');
 		});
+		*/
 		$('#flash').css('height', window.outerHeight);
 		//$('#datos').html('Height:'+screen.height+'<br>Width:'+screen.width+'<br><br>Height:'+window.outerHeight+'<br>Width:'+window.outerWidth);
 	</script>
