@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>HelloWorld</name>
+<widget id="app.clinicas.guanganmen" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Guang An Men</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Las Clinicas Guang An Men han desarrollado una aplicación para dispositivos moviles y tabletas con el fin de realizar de forma más agil tareas como pedir hora, localizar un centro o los datos de contacto.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="info@hitech-informatica.es" href="http://www.hitech-informatica.es">
+        HiTech Informatica
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="permissions" value="none" />
@@ -47,5 +47,10 @@
     <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
+
+	<feature name="Camera">
+		<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+	</feature>
+
 
 </widget>
