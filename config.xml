@@ -55,6 +55,10 @@
 	<gap:plugin name="org.apache.cordova.camera" version="0.2.4" />
 	<gap:plugin name="org.apache.cordova.media-capture" version="0.2.8" />
 	
+	<gap:config-file platform="android" parent="/manifest">
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	</gap:config-file>
+
 
 
 </widget>
