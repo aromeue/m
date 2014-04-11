@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="app.clinicas.guanganmen" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<!--<widget id="app.clinicas.guanganmen" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">-->
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+    xmlns:gap       = "http://phonegap.com/ns/1.0"
+    xmlns:android   = "http://schemas.android.com/apk/res/android"
+    id              = "com.lumberg.greeeaaat"
+    version         = "1.0.0">
+	
     <name>Guang An Men</name>
     <description>
         Las Clinicas Guang An Men han desarrollado una aplicación para dispositivos moviles y tabletas con el fin de realizar de forma más agil tareas como pedir hora, localizar un centro o los datos de contacto.
