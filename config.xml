@@ -62,11 +62,8 @@
     	<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
 	</feature>
 	
-	
-	<!--
 	<gap:config-file target="AndroidManifest.xml" parent="/manifest/application">
 		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	</gap:config-file>
-	-->
 
 </widget>
