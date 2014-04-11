@@ -3,7 +3,7 @@
 <widget xmlns       = "http://www.w3.org/ns/widgets"
     xmlns:gap       = "http://phonegap.com/ns/1.0"
     xmlns:android   = "http://schemas.android.com/apk/res/android"
-    id              = "com.lumberg.greeeaaat"
+    id              = "app.clinicas.guanganmen"
     version         = "1.0.0">
 	
     <name>Guang An Men</name>
@@ -68,8 +68,10 @@
     	<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
 	</feature>
 	
+	<!--
 	<gap:config-file target="AndroidManifest.xml" parent="/manifest/application">
 		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	</gap:config-file>
+	-->
 
 </widget>
