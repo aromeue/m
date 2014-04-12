@@ -70,6 +70,10 @@
     	<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
 	</feature>
 	
+	<plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+	<feature name="http://api.phonegap.com/1.0/camera"/>
+	<feature name="http://api.phonegap.com/1.0/file"/>
+	
 	<!--
 	<gap:config-file target="AndroidManifest.xml" parent="/manifest/application">
 		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
