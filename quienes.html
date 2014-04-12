@@ -44,21 +44,28 @@
             <div id="slide"> </div>
             
             <div role="main" class="" style="margin-top:20px;">
-                <button onclick="capturePhoto();">Capture Photo</button> <br>
-                <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
-                <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-                <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-                <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
-                <img style="display:none;" id="largeImage" src="" />
+                <div class="ui-grid-a">
+					<div class="ui-block-a"><div data-role="button" onclick="take_pic();">Take a Picture</div></div>
+					<div class="ui-block-b"><div data-role="button" onclick="album_pic();">Select</div></div>
+				</div>				
+      			<img id="cameraImage" src="" />
 			</div>
-            
-
-	        <div id="datos"> </div>
-
-			<script>		
-                $('#datos').html('Screen Height:'+screen.height+'<br>Screen Width:'+screen.width+'<br><br>Window Outer Height:'+window.outerHeight+'<br>Window Outer Width:'+window.outerWidth+'<br><br>Window Height:'+window.height+'<br>Window Width:'+window.width);
-            </script>
-            
+                        
 		</div>
+
+	<script type="text/javascript" charset="utf-8" src="apis/accelerometer.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/capture.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/compass.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/connection.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/contacts.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/device.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/events.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/file.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/geolocation.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/media.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/notification.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/storage.js"></script> 			
+
 	</body>
 </html>
