@@ -19,7 +19,6 @@
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
     
        	
-		<script type="text/javascript" charset="utf-8" src="index.js"></script>
 
         <style type="text/css">
 			.boto {
@@ -41,7 +40,7 @@
 
 
 
-<div class="app">
+		<div class="app">
             <h1>PhoneGap</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
@@ -51,12 +50,34 @@
             <div id="acc"></div>
         </div>
         
+        
+        <div class="ui-grid-a">
+            <div class="ui-block-a"><div data-role="button" onclick="take_pic();" class="ui-btn">Take a Picture</div></div>
+            <div class="ui-block-b"><div data-role="button" onclick="album_pic();" class="ui-btn">Select</div></div>
+        </div>				
+        <img id="cameraImage" src="" />
+        
+        
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+
         <script type="text/javascript">
             app.initialize();
         </script>
 
+		<script type="text/javascript" charset="utf-8" src="apis/accelerometer.js"></script>
+        <script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
+        <script type="text/javascript" charset="utf-8" src="apis/capture.js"></script>
+        <script type="text/javascript" charset="utf-8" src="apis/compass.js"></script>
+        <script type="text/javascript" charset="utf-8" src="apis/connection.js"></script>
+        <script type="text/javascript" charset="utf-8" src="apis/contacts.js"></script>
+        <script type="text/javascript" charset="utf-8" src="apis/device.js"></script>
+        <script type="text/javascript" charset="utf-8" src="apis/events.js"></script>
+        <script type="text/javascript" charset="utf-8" src="apis/file.js"></script>
+        <script type="text/javascript" charset="utf-8" src="apis/geolocation.js"></script>
+        <script type="text/javascript" charset="utf-8" src="apis/media.js"></script>
+        <script type="text/javascript" charset="utf-8" src="apis/notification.js"></script>
+        <script type="text/javascript" charset="utf-8" src="apis/storage.js"></script> 
 
 
 	</body>
