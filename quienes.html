@@ -37,39 +37,9 @@
 	</head>
     
 	<body>
-		<div data-role="page" data-theme="b">
-			<div data-role="header" style="overflow:hidden;">
-	            <h1>Guang An Men</h1>
-            </div>
-            
-            <div id="slide"> </div>
-            
-       
-            
-            <div role="main" class="" style="margin-top:20px;">
-	                   
-                <img id="myImage" src="" />
-            </div>
-                        
-		</div>
 
     
-    <script>
-	
-	navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-    destinationType: Camera.DestinationType.DATA_URL
-});
 
-function onSuccess(imageData) {
-    var image = document.getElementById('myImage');
-    image.src = "data:image/jpeg;base64," + imageData;
-}
-
-function onFail(message) {
-    alert('Failed because: ' + message);
-}
-
-</script>	
 
 
 <div class="app">
