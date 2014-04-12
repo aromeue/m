@@ -14,7 +14,7 @@
         HiTech Informatica
     </author>
     <feature name="http://api.phonegap.com/3.3.0/device" />
-    <preference name="permissions" value="none" />
+    <preference name="permissions" value="camera" />
     <preference name="orientation" value="portrait" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
