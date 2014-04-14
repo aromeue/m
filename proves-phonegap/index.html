@@ -15,7 +15,6 @@
 		<link rel="stylesheet" href="themes/clinicas.min.css" />
 		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
-		
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 
@@ -73,7 +72,7 @@
 
 	        <div id="datos" style="clear:both;"> </div>
             
-         <div class="app" style="clear:both">
+            <div class="app" style="clear:both">
             <h1>PhoneGap</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
@@ -84,6 +83,7 @@
         </div>
         
 		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="GCMPlugin.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         // Wait for device API libraries to load
@@ -102,6 +102,7 @@
         }
     
         </script>
+
 
 		<script>		
             $('#datos').html('Screen Height:'+screen.height+'<br>Screen Width:'+screen.width+'<br><br>Window Outer Height:'+window.outerHeight+'<br>Window Outer Width:'+window.outerWidth+'<br><br>Window Height:'+window.height+'<br>Window Width:'+window.width);
