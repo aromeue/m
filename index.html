@@ -17,9 +17,6 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-    
-       	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-		<script type="text/javascript" charset="utf-8" src="index.js"></script>
 
         <style type="text/css">
 			.boto {
@@ -63,19 +60,52 @@
                 </div>
                 
                 <div>
+                    <a href="que_es_mtc.html">
                     <div class="boto">
                         <p>¿Qué es la MTC?</p>
                     </div>
+                    </a>
                 </div>                
                 
 			</div>
             
 
-	        <div id="datos"> </div>
+	        <div id="datos" style="clear:both;"> </div>
+            
+            <div class="app" style="clear:both">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+            
+            <div id="acc"></div>
+        </div>
+        
+		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+            var element = document.getElementById('deviceProperties');
+            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
+                                'Device Cordova: '  + device.cordova  + '<br />' +
+                                'Device Platform: ' + device.platform + '<br />' +
+                                'Device UUID: '     + device.uuid     + '<br />' +
+                                'Device Version: '  + device.version  + '<br />';
+        }
+    
+        </script>
 
-			<script>		
-                $('#datos').html('Screen Height:'+screen.height+'<br>Screen Width:'+screen.width+'<br><br>Window Outer Height:'+window.outerHeight+'<br>Window Outer Width:'+window.outerWidth+'<br><br>Window Height:'+window.height+'<br>Window Width:'+window.width);
-            </script>
+
+		<script>		
+            $('#datos').html('Screen Height:'+screen.height+'<br>Screen Width:'+screen.width+'<br><br>Window Outer Height:'+window.outerHeight+'<br>Window Outer Width:'+window.outerWidth+'<br><br>Window Height:'+window.height+'<br>Window Width:'+window.width);
+        </script>
             
 		</div>
 	</body>
