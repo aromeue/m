@@ -21,9 +21,9 @@ function registerPushwoosh()
 {
 	var pushNotification = window.plugins.pushNotification;
 	//projectid: "GOOGLE_PROJECT_ID", appid : "PUSHWOOSH_APP_ID"
-	pushNotification.registerDevice({ projectid: "60756016005", appid : "4F0C807E51EC77.93591449" },
+	pushNotification.registerDevice({ projectid: "675581025503", appid : "E9024-6EF1C" },
 									function(token) {
-										alert(token);
+										//alert(token);
 										onPushwooshInitialized(token);
 									},
 									function(status) {
