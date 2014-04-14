@@ -66,6 +66,10 @@
 	<gap:plugin name="org.apache.cordova.camera" />
 	<gap:plugin name="org.apache.cordova.media-capture" />
 	
+	<gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
+	<plugin name="PushNotification" value="com.pushwoosh.plugin.pushnotifications.PushNotifications" onload="true"/>
+    <access origin="https://cp.pushwoosh.com" subdomains="true" />
+	
 	<feature name="Camera">
     	<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
 	</feature>
@@ -78,27 +82,28 @@
 	<feature name="http://api.phonegap.com/1.0/media"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
 	
+	<!--
 	<gap:config-file target="AndroidManifest.xml" parent="/manifest/application">
 		<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 		<uses-permission android:name="android.permission.WAKE_LOCK" />
 		
 		<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-		<permission android:name="curious-petal-550.permission.C2D_MESSAGE" android:protectionLevel="signature" />
-		<uses-permission android:name="curious-petal-550.permission.C2D_MESSAGE" />	
+		<permission android:name="675581025503.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+		<uses-permission android:name="675581025503.permission.C2D_MESSAGE" />	
 		
 		<receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
 		  <intent-filter>
 			<action android:name="com.google.android.c2dm.intent.RECEIVE" />
 			<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-			<category android:name="curious-petal-550" />
+			<category android:name="675581025503" />
 		  </intent-filter>
 		</receiver>
 
 		<service android:name=".GCMIntentService" />
 		
 	</gap:config-file>
+	-->
 
 	
-	<plugin name="GCMPlugin" value="com.plugin.GCM.GCMPlugin" />
 
 </widget>
