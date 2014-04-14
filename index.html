@@ -21,6 +21,15 @@
 	</head>
     
 	<body>
+    	
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> <!-- Llibreria PhoneGap -->
+        <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/push.js"></script>
+	
+		<script type="text/javascript">
+            app.initialize();
+        </script>
+    	
 		<div data-role="page" class="ui-responsive-panel">
 
 			<div data-role="header" data-theme="f">
@@ -38,7 +47,7 @@
                         </div>
                     </div>
                     
-                    <input type="button" value="Register" style="width: 200px; height: 100px;" onclick="registerPushwoosh();" >
+                    <input type="button" value="Register" style="width: 200px; height: 100px;" onclick="registerPushwooshAndroid();" >
                     <input type="button" value="Unregister" style="width: 200px; height: 100px;" onclick="unregisterPushwoosh();" >
 
 			</div><!-- /content -->
@@ -92,13 +101,7 @@
 				
 		</div><!-- /page -->
         
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> <!-- Llibreria PhoneGap -->
-        <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/push.js"></script>
-	
-		<script type="text/javascript">
-            app.initialize();
-        </script>
+        
         
 	</body>
 </html>
