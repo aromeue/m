@@ -19,78 +19,23 @@
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 	</head>
     
-	<body>
-		<div data-role="page" class="ui-responsive-panel">
+    <body>
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript" src="PushNotification.js"></script>
+        <script type="text/javascript" src="js/push.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+		
+		<input type="button" value="Register" style="width: 200px; height: 100px;" onclick="registerPushwoosh();" >
+		<input type="button" value="Unregister" style="width: 200px; height: 100px;" onclick="unregisterPushwoosh();" >
+    </body>
 
-			<div data-role="header" data-theme="f">
-				<h1>Guang An Men</h1>
-				<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
-			</div><!-- /header -->
-			<div data-role="content">
-				<h2>Bienvenido a las Clinicas Guang An Men</h2>
-
-				<p>This is a typical page that has two buttons in the header bar that open panels. The left button opens a left menu with the reveal display mode. The right button opens a form in a right overlay panel.</p>
-				
-				<p>Since the panel links are in the top bar, there really isn't a need for the fixed positioning feature on the panel since you will always be scrolled to the top of the page. The fixed positioning impacts animation smoothness so it's off in this demo (<code>data-position-fixed="false"</code>) and the panel will scroll with the page.</p>
-				
-				<p>To make this responsive, the left panel stays open and causes the page to re-flow at wider widths. This allows both the menu and page to be used together when more space is available. This behavior is controlled by CSS media queries. You can create a custom one for a specific breakpoint or use the breakpoint preset by adding the <code> class="ui-responsive-panel"</code> to the page container.</p>
-
-			</div><!-- /content -->
-
-			<div class="jqm-footer">
-				<p class="jqm-version"></p>
-				<p>&copy; 2014 by HiTech Informatica</p>
-			</div><!-- /jqm-footer -->
-			
-			
-			<style>
-				.nav-search .ui-btn-up-a {
-					background-image:none;
-					background-color:#333333;
-				}
-				.nav-search .ui-btn-inner {
-					border-top: 1px solid #888;
-					border-color: rgba(255, 255, 255, .1);
-				}
-            </style>
-
-				<div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a">
-
-					<ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
-						<li data-icon="delete" style="background-color:#111;">
-							<a href="#" data-rel="close">Volver</a>
-						</li>
-						<li data-filtertext="wai-aria voiceover accessibility screen reader">
-							<a href="../about/accessibility.html">¿Quienes somos?</a>
-						</li>
-						<li data-filtertext="accordions collapsible set collapsible-set collapsed">
-							<a href="../content/content-collapsible-set.html">Especialidades</a>
-						</li>
-						<li data-filtertext="ajax navigation model">
-							<a href="../pages/page-navmodel.html">Policlinicas</a>
-						</li>
-						<li data-filtertext="anatomy of page viewport">
-							<a href="../pages/page-anatomy.html">Videos</a>
-						</li>
-						<li data-filtertext="events api animationComplete transition css">
-							<a href="../api/events.html">Tu opinion</a>
-						</li>
-						<li data-filtertext="listview autodivider">
-							<a href="../lists/lists-autodividers.html">Contactar</a>
-						</li>
-					</ul>
-
-					<!-- panel content goes here -->
-				</div><!-- /panel -->
-	
-				<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-				<!--
-				<script type="text/javascript" src="PushNotification.js"></script>
-                <script type="text/javascript" src="js/push.js"></script>
-				<script>
-					registerPushwooshAndroid();
-				</script>
-                -->
-		</div><!-- /page -->
-	</body>
 </html>
