@@ -90,17 +90,6 @@
 			android:protectionLevel="signature" />
 		<uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
 	
-		<application ...>
-			<receiver
-				android:name=".GcmBroadcastReceiver"
-				android:permission="com.google.android.c2dm.permission.SEND" >
-				<intent-filter>
-					<action android:name="com.google.android.c2dm.intent.RECEIVE" />
-					<category android:name="com.example.gcm" />
-				</intent-filter>
-			</receiver>
-			<service android:name=".GcmIntentService" />
-		</application>
 	</gap:config-file>
 
 	
