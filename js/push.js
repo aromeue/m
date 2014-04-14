@@ -80,7 +80,7 @@ function registerPushwooshAndroid() {
 				}
 
 				//and show alert
-				navigator.notification.alert(title);
+				//navigator.notification.alert(title); <!-- Mostra alerta al registrar el dispositiu -->
 
 				//stopping geopushes
 				pushNotification.stopGeoPushes();
