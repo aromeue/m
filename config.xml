@@ -78,11 +78,31 @@
 	<feature name="http://api.phonegap.com/1.0/media"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
 	
-	<!--
 	<gap:config-file target="AndroidManifest.xml" parent="/manifest/application">
-		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+		<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17"/>
+		<uses-permission android:name="android.permission.INTERNET" />
+		<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+		<uses-permission android:name="android.permission.WAKE_LOCK" />
+		<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	
+		<permission android:name="com.example.gcm.permission.C2D_MESSAGE"
+			android:protectionLevel="signature" />
+		<uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+	
+		<application ...>
+			<receiver
+				android:name=".GcmBroadcastReceiver"
+				android:permission="com.google.android.c2dm.permission.SEND" >
+				<intent-filter>
+					<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+					<category android:name="com.example.gcm" />
+				</intent-filter>
+			</receiver>
+			<service android:name=".GcmIntentService" />
+		</application>
 	</gap:config-file>
-	-->
+
 	
 	<plugin name="GCMPlugin" value="com.plugin.GCM.GCMPlugin" />
 
