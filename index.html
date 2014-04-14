@@ -29,16 +29,29 @@
 		<script type="text/javascript">
             app.initialize();
         </script>
+        
+        <style type="text/css">
+		 #slider {
+			 background:url(http://www.clinicasguanganmen.es/m/img/slider1.png) top center no-repeat auto 100%;
+			 height:200px;
+			 clear:both;
+			 margin:0px;
+		 }
+		</style>
     	
 		<div data-role="page" class="ui-responsive-panel">
 
 			<div data-role="header" data-theme="f">
 				<h1>Clinicas Guang An Men</h1>
 				<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
-				<a href="#add-form" data-icon="plus" data-iconpos="notext">Add</a>
 			</div><!-- /header -->
 			<div data-role="content">
+            
+			<div id="slider"></div>
 
+
+
+			<!--- Info del PhoneGap i PUSH -->
                     <div class="app">
                         <h1>PhoneGap</h1>
                         <div id="deviceready" class="blink">
@@ -47,27 +60,16 @@
                         </div>
                     </div>
                     
-                    <input type="button" value="Register" style="width: 200px; height: 100px;" onclick="registerPushwooshAndroid();" >
-                    <input type="button" value="Unregister" style="width: 200px; height: 100px;" onclick="unregisterPushwoosh();" >
-
+                    <input type="button" value="Registrar PUSH" style="width: 200px; height: 100px;" onclick="registerPushwooshAndroid();" >
+                    <input type="button" value="Desregistrar PUSH" style="width: 200px; height: 100px;" onclick="unregisterPushwoosh();" >
+			<!-- // Final info PhoneGap i PUSH -->
 			</div><!-- /content -->
 
 			<div class="jqm-footer">
 				<p class="jqm-version"></p>
-				<p>&copy; 2010, 2013 jQuery Foundation and other contributors</p>
+				<p>&copy; 2014 HiTech Informàtica</p>
 			</div><!-- /jqm-footer -->
 			
-			
-			<style>
-				.nav-search .ui-btn-up-a {
-					background-image:none;
-					background-color:#333333;
-				}
-				.nav-search .ui-btn-inner {
-					border-top: 1px solid #888;
-					border-color: rgba(255, 255, 255, .1);
-				}
-            </style>
             
 				<div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="b">
 				<!--<div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a">-->
