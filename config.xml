@@ -13,7 +13,7 @@
     <author email="info@hitech-informatica.es" href="http://www.hitech-informatica.es">
         HiTech Informatica
     </author>
-    <feature name="http://api.phonegap.com/3.3.0/device" />
+    
     <preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />
     <preference name="target-device" value="universal" />
@@ -70,7 +70,7 @@
 	<plugin name="PushNotification" value="com.pushwoosh.plugin.pushnotifications.PushNotifications" onload="true"/>
     <access origin="https://cp.pushwoosh.com" subdomains="true" />
 	
-	<feature name="Camera">
+	<feature name="camera">
     	<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
 	</feature>
 	
@@ -81,7 +81,7 @@
 	<feature name="http://api.phonegap.com/1.0/device" />
 	<feature name="http://api.phonegap.com/1.0/media"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
-	
+
 	<!--
 	<gap:config-file target="AndroidManifest.xml" parent="/manifest/application">
 		<uses-permission android:name="android.permission.GET_ACCOUNTS" />
