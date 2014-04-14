@@ -14,7 +14,7 @@
         HiTech Informatica
     </author>
     <feature name="http://api.phonegap.com/3.3.0/device" />
-    <preference name="permissions" value="camera" />
+    <preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
@@ -71,6 +71,7 @@
 	</feature>
 	
 	<plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+	
 	<feature name="http://api.phonegap.com/1.0/camera"/>
 	<feature name="http://api.phonegap.com/1.0/file"/>
 	<feature name="http://api.phonegap.com/1.0/device" />
@@ -82,5 +83,7 @@
 		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	</gap:config-file>
 	-->
+	
+	<plugin name="GCMPlugin" value="com.plugin.GCM.GCMPlugin" />
 
 </widget>
