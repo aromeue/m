@@ -65,6 +65,7 @@
 	<gap:plugin name="org.apache.cordova.file"  />
 	<gap:plugin name="org.apache.cordova.camera" />
 	<gap:plugin name="org.apache.cordova.media-capture" />
+	<gap:plugin name="org.apache.cordova.network-information" />
 	
 	<gap:plugin name="com.pushwoosh.plugins.pushwoosh" />
 	<plugin name="PushNotification" value="com.pushwoosh.plugin.pushnotifications.PushNotifications" onload="true"/>
