@@ -226,9 +226,11 @@ function checkConnection() {
 	
 	if(networkState==Connection.NONE)
 		window.location="senseconnexio.html";
-	else
+/*	else
 		if(window.location=="senseconnexio.html")
 			window.location="index.html";
+*/
+alert(window.location);
 }
 
 var app = {
