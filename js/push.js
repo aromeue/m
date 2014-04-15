@@ -224,13 +224,14 @@ function checkConnection() {
 
     //alert('Connection type: ' + states[networkState]);
 	
-	if(networkState==Connection.NONE)
+	if(networkState==Connection.NONE) {
 		window.location="senseconnexio.html";
-/*	else
-		if(window.location=="senseconnexio.html")
+	} else {
+		if(window.location=="file:///android_asset/www/senseconnexio.html") <!-- Per a Androids -->
 			window.location="index.html";
-*/
-	alert("url:"+window.location);
+	}
+
+	//alert("url:"+window.location);
 }
 
 var app = {
