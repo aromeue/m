@@ -209,6 +209,18 @@ function onPushwooshAndroidInitialized(pushToken)
 	}
 }
 
+function reachableCallback(reachability) {
+	// There is no consistency on the format of reachability
+	var networkState = reachability.code || reachability;
+	
+	var states = {};
+	states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
+	states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
+	states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
+	
+	alert('Connection type: ' + states[networkState]);
+}
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -226,6 +238,9 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+		//Comprova conexio a internet
+		navigator.network.isReachable("www.clinicasguanganmen.es", reachableCallback, {});
+		
         initPushwoosh();
         app.receivedEvent('deviceready');
     },
