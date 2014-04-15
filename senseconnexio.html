@@ -6,13 +6,14 @@
         <link rel="stylesheet" href="css/estils.css" />  <!-- Estils propis -->
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> <!-- Llibreria PhoneGap -->
         <script type="text/javascript" charset="utf-8" src="js/push.js"></script> <!-- Funcions PushWoosh -->
+        <script src="js/jquery.min.js"></script>
 	</head>
     
-	<body>
-    <div id="NoConnectSplash"></div>
+	<body style="margin:0px;padding:0px;">
+        <div id="NoConnectSplash"><p>&nbsp;</p></div>
+        <script type="text/javascript">
+            $("#NoConnectSplash").css("height",window.outerHeight);
+            app.initialize();
+        </script>
 	</body>
 </html>
-<script>
-	document.getElementById('NoConnectSplash').style.height=window.outerHeight+" !important";
-	app.initialize();
-</script>
