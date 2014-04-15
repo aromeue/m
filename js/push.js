@@ -230,7 +230,7 @@ function checkConnection() {
 		if(window.location=="senseconnexio.html")
 			window.location="index.html";
 */
-alert(window.location);
+	alert("url:"+window.location);
 }
 
 var app = {
