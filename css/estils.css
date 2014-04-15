@@ -11,3 +11,15 @@
 .justifica p {
 	text-align:justify;
 }
+
+.social p {
+	text-align:center;
+}
+.social a {
+	text-decoration:none;
+}
+
+.footer {
+	text-align:center;
+	font-size:0.9em;
+}
