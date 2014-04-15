@@ -222,10 +222,13 @@ function checkConnection() {
     states[Connection.CELL]     = 'Cell generic connection';
     states[Connection.NONE]     = 'No network connection';
 
-    alert('Connection type: ' + states[networkState]);
+    //alert('Connection type: ' + states[networkState]);
 	
 	if(networkState==Connection.NONE)
 		window.location="senseconnexio.html";
+	else
+		if(window.location=="senseconnexio.html")
+			window.location="index.html";
 }
 
 var app = {
@@ -239,6 +242,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
 		document.addEventListener("offline", this.onGoOffline, false);
+		document.addEventListener("online", this.onGoOffline, false);
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
