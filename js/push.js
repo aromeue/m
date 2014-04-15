@@ -223,6 +223,9 @@ function checkConnection() {
     states[Connection.NONE]     = 'No network connection';
 
     alert('Connection type: ' + states[networkState]);
+	
+	if(networkState==Connection.WIFI)
+		window.location="senseconnexio.html";
 }
 
 var app = {
