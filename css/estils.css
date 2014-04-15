@@ -26,5 +26,8 @@
 
 #NoConnectSplash {
 	background:#FFF url(../img/nonetconn.png) top center fixed;
-	background-size:auto 100%;
+	background-size:cover;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
 }
