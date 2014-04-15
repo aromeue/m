@@ -10,38 +10,31 @@
         <!-- width=device-width, height=device-height, -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
         
-        <link rel="stylesheet" href="index.css" /> 
+        <link rel="stylesheet" href="css/estils.css" />  <!-- Estils propis -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> <!-- FontAwesome -->
         
-		<link rel="stylesheet" href="themes/clinicas.min.css" />
-		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
-		
-		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <!-- Estils i Javascripts de JQuery -->
+            <link rel="stylesheet" href="themes/clinicas.min.css" />
+            <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+            <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <!--//          -->
 	</head>
     
 	<body>
     	
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> <!-- Llibreria PhoneGap -->
-        <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/push.js"></script>
+        <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script> <!-- Llibreria plugin Push -->
+        <script type="text/javascript" charset="utf-8" src="js/push.js"></script> <!-- Funcions PushWoosh -->
 	
 		<script type="text/javascript">
             app.initialize();
         </script>
-        
-        <style type="text/css">
-		 #slider {
-			 background:#FFF url(http://www.clinicasguanganmen.es/m/img/slider2.png) top center no-repeat;
-			 height:200px;
-			 clear:both;
-			 margin:0px;
-		 }
-		</style>
     	
 		<div data-role="page" class="ui-responsive-panel">
 
-			<div data-role="header" data-theme="f">
+			<div data-role="header" data-theme="b">
 				<h1>Clinicas Guang An Men</h1>
 				<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
                 <a href="tel:+34977703703" data-icon="phone" data-iconpos="notext">977 70 37 03</a>
@@ -52,26 +45,33 @@
             	<h2>Bienvenidos a las Clínicas Guang An Men</h2>
                 
                 <p>Las Clínicas Guang An Men, desde 1989, son líderes del sector en España, dedicados exclusivamente a la medicina china de manera integral, combinando la Acupuntura, fitoterapia china, dietética y tuina, porque se ha demostrado durante miles de años que la medicina china es mucho más efectiva que la acupuntura aplicada por sí sola.</p>
-                
                 <p>Las Clínicas Guang An Men cuentan con nueve centros propios cuyo equipo terapeutico está altamente cualificado.</p>
-                
                 <p>Nuestros centros disponen de unas modernas y espaciosas instalaciones, para ayudarles a recuperar su salud y bienestar en un ambiente confortable y armonioso con un trato humano de excelencia.</p>
-			
+                <p>Las Clínicas Guang An Men ofrecen el <strong>Servicio de Consulta Informativa Gratuita</strong>, para que los pacientes puedan consultar su caso con nuestros profesionales y se valoren las expectativas antes de tomar la decisión de iniciar el tratamiento.</p>
+                <p>La mayoría de las primeras visitas de la Clínica Guang An Men proceden de recomendaciones de otros pacientes. Esto demuestra el grado de satisfacción de nuestros pacientes gracias a la alta calidad terapéutica y el servicio personalizado recibido.</p>
+                <p>Las Clínicas Guang An Men colaboran estrechamente con instituciones internacionales como la Federación Mundial de Medicina China (WFCMS), Federación Mundial de Acupuntura (WFAS) que a su vez es colaborador de la OMS, Federación Europea de Medicina China (PEFOTS), lo cual nos permite estar al alcance de los nuevos avances terapéuticos y científicos de la medicina china.</p>
+                <p>Las Clínicas Guang An Men están reconocidas y amparadas por la Fundación Europea de MTC, institución dedicada a la difusión, docencia e investigación de la medicina china bajo los criterios de calidad y rigor científico, y cuenta con el apoyo de prestigiosas entidades como las Universidades de Beijing y de Yunnan, Colegio Oficial de Médicos de Tarragona, entre otras.</p>
+                <p>Inmersa en un proyecto de mejora continua, el máximo compromiso de las Clínicas Guang An Men es ofrecer un servicio integral y de calidad a nuestros pacientes. Los más de 20 años de experiencia nos avalan.</p>
+                <p style="text-align:center"><strong>Bienvenidos a la Clínica Guang An Men y gracias por confiar en nosotros.</strong></p>
+
             <div>
             	<h3>Visitanos en las redes sociales...</h3>
-            	<p>    </p>
+            	<p><i class="fa-facebook"></i> Facebook</p>
+                <p><i class="fa-twitter"></i> Twitter</p>
+                <p><i class="fa-youtube"></i> Youtube</p>
             </div>
 			<!--- Info del PhoneGap i PUSH -->
+            		<hr>
                     <div class="app">
-                        <h1>PhoneGap</h1>
                         <div id="deviceready" class="blink">
                             <p class="event listening">Provant de connectar</p>
                             <p class="event received">Tot OK</p>
                         </div>
                     </div>
-                    
-                    <input type="button" value="Registrar PUSH" style="width: 200px; height: 100px;" onclick="registerPushwooshAndroid();" >
-                    <input type="button" value="Desregistrar PUSH" style="width: 200px; height: 100px;" onclick="unregisterPushwoosh();" >
+                    <!--
+                        <input type="button" value="Registrar PUSH" style="width: 200px; height: 100px;" onclick="registerPushwooshAndroid();" >
+                        <input type="button" value="Desregistrar PUSH" style="width: 200px; height: 100px;" onclick="unregisterPushwoosh();" >
+                    -->
 			<!-- // Final info PhoneGap i PUSH -->
 			</div><!-- /content -->
 
