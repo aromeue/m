@@ -2,10 +2,11 @@
 /* CSS Document */
 
 #slider {
-	 background:#FFF url(http://www.clinicasguanganmen.es/m/img/slider2.png) top center no-repeat;
+	 background:#FFF url(http://www.clinicasguanganmen.es/m/img/slider.jpg) top center no-repeat;
 	 height:200px;
 	 clear:both;
 	 margin:0px;
+	 border-bottom:2px solid #C66;
 }
 
 .justifica p {
