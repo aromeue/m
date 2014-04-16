@@ -32,6 +32,9 @@
 			
 			function enviarform() {
 				datastring = $('#citaprevia').serialize();
+				$("#visita").load("http://www.clinicasguanganmen.es/m/visita.php?nom=Alvaro");
+
+				/*
 				$.ajax({
 					type : "POST",
 					url : "http://www.clinicasguanganmen.es/m/visita.php",
@@ -43,6 +46,7 @@
 						//$("#loading").show();
 					}
 				});
+				*/
 			}
         </script>
     	
