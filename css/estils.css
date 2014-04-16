@@ -30,3 +30,7 @@
 	background:#FFF url(../img/nonetconn.png) top center fixed;
 	background-size:auto 100%;
 }
+
+#citaonline button {
+	width:90% !important;
+}
