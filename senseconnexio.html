@@ -12,8 +12,10 @@
 	<body style="margin:0px;padding:0px;">
         <div id="NoConnectSplash"><p>&nbsp;</p></div>
         <script type="text/javascript">
-            $("#NoConnectSplash").css("height",$(window).height());
-            app.initialize();
+			$(document).ready(function(){
+				$("#NoConnectSplash").css("height",$(window).height());
+				app.initialize();
+			});
         </script>
 	</body>
 </html>
