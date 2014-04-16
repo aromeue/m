@@ -69,6 +69,7 @@
                 <div id="visita">
                 	<form id="citaprevia" name="citaprevia" >
                     	<input type="text" name="nom" id="nom" value="" >
+                        <input type="text" name="apellidos" id="apellidos" value="" >
                         <input type="button" class="ui-btn" value="Enviar" >
                     </form>
                 </div>
@@ -81,43 +82,38 @@
                 </div>
                 
 				<script type="text/javascript">
-                    /*
-					$(document).ready(function(){
-                        $("#visita").load("http://www.clinicasguanganmen.es/m/visita.php");
-                    });
-					*/
+				$(document).ready(function() {
+				  // Bind this action as a function to be executed when the button is clicked...
+				  $('input[type="button"][value="Enviar"]').click(function() {
+					$.post('http://www.clinicasguanganmen.es/m/visita.php', 
+					  $('#citaprevia').serialize() /* Array de valors del formulari */
 					
-					$(document).ready(function() {
-					  // Bind this action as a function to be executed when the button is clicked...
-					  $('input[type="button"][value="Enviar"]').click(function() {
-						$.post('http://www.clinicasguanganmen.es/m/visita.php', {
-					
-						  // These are the names of the form values
-						  // EDIT: You have the wrong ids on these...
-					
-						  nom: $('#nom').val()
-						  /*LastName: $('#txtemail').val(),
-						  Email: $('#txtcontact').val(),
-						  MessageText: $('#txtmessage').val()*/
-					
-						  // HTML function
-					
-						  }, function (html) {
-							  // Place the HTML in a astring
-							  var response=html;
-					
-							  // PHP was done and email sent
-							  if (response=="ok") {
-								alert("Tot OK"); 
-							  } else {
-								// Error postback
-								alert("Error"); 
-								return false;
-							  }
-						});
-					  });
-				    });
-					
+					//{
+					  // These are the names of the form values
+					  // EDIT: You have the wrong ids on these...
+					  //nom: $('#nom').val(),
+					  //LastName: $('#txtemail').val(),
+					  //Email: $('#txtcontact').val(),
+					  //MessageText: $('#txtmessage').val()*/
+					  //}*/
+					  // HTML function
+					  , function (html) {
+						  // Place the HTML in a astring
+						  var response=html;
+						  // PHP was done and email sent
+						  $("#visita").html(response);
+						  /*
+						  if (response=="ok") {
+							alert("Tot OK"); 
+						  } else {
+							// Error postback
+							alert("Error"); 
+							return false;
+						  }
+						  */
+					});
+				  });
+				});
                 </script>
 
 			</div><!-- /content -->
