@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Clinicas Guang An Men</title>
+        
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <!-- width=device-width, height=device-height, -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        
+        <link rel="stylesheet" href="css/estils.css" />  <!-- Estils propis -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> <!-- FontAwesome -->
+        
+        <!-- Estils i Javascripts de JQuery -->
+            <link rel="stylesheet" href="themes/clinicas.min.css" />
+            <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+            <script src="js/jquery.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <!--//          -->
+	</head>
+    
+	<body>
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> <!-- Llibreria PhoneGap -->
+        <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script> <!-- Llibreria plugin Push -->
+        <script type="text/javascript" charset="utf-8" src="js/push.js"></script> <!-- Funcions PushWoosh -->
+	
+		<script type="text/javascript">
+            app.initialize();
+        </script>
+    	
+		<div data-role="page" class="ui-responsive-panel" data-theme="b">
+
+			<div data-role="header" data-position="fixed">
+				<h1>Clinicas Guang An Men</h1>
+				<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+                <a href="tel:+34977703703" data-icon="phone" data-iconpos="notext">977 70 37 03</a>
+                <div id="slider"></div>
+			</div><!-- /header -->
+			<div data-role="content" class="justifica">
+            
+            	<h2>¿Quienes somos?</h2>
+                <p>Las <strong>clínicas Guang An Men</strong>, adscritas a la Fundación Europea de MTC, nacen en 1989, fruto de un convenio de colaboración con el prestigioso Hospital Guang An Men de Beijing (R.P.China).</p>
+                <p>La primera clínica europea exclusivamente dedicada al tratamiento integral con medicina china fue la clínica Guang An Men de Amposta.</p>
+                <p>En la actualidad, las clínicas Guang An Men están ubicadas en Barcelona, Valencia, Madrid, Alicante, San Vicente del Raspeig, Elda, Amposta y Tarragona.</p>
+                <p>El equipo terapéutico está formado por médicos, acupuntores y profesionales nativos, altamente cualificados en medicina china, que cuentan con un amplio currículum y reconocida experiencia. En nuestras clínicas tratamos múltiples patologías mediante diferentes métodos terapéuticos de la medicina china, tales como la acupuntura (inserción de agujas), la moxibustión (aplicación de calor), el tuina (masaje chino), la auriculoterapia y la fitoterapia (plantas medicinales)</p>
+                <p>El equipo terapéutico de las Clínicas Guang An Men atiende cada año a unos 20.000 pacientes de todas las edades.</p>
+                <p>La estrecha relación con la Escuela Superior de MTC hace que el equipo terapéutico esté formándose continuamente. </p>
+            <div>
+            	<h3>Visitanos en las redes sociales...</h3>
+                <div class="ui-grid-b social">
+                	<div class="ui-block-a"><p><a href="https://www.facebook.com/ClinicasGAM"><i class="fa fa-facebook"></i> Facebook</a></p></div>
+                    <div class="ui-block-b"><p><a href="https://twitter.com/@femtc"><i class="fa fa-twitter"></i> Twitter</a></p></div>
+                    <div class="ui-block-c"><p><a href="https://www.youtube.com/user/FEMTC1"><i class="fa fa-youtube"></i> Youtube</a></p></div>
+                </div>
+            </div>
+			<!--- Info del PhoneGap i PUSH -->
+            		<hr>
+                    <div class="app">
+                        <div id="deviceready" class="blink">
+                            <p class="event listening">Provant de connectar</p>
+                            <p class="event received">Tot OK</p>
+                        </div>
+                    </div>
+                    <!--
+                        <input type="button" value="Registrar PUSH" style="width: 200px; height: 100px;" onclick="registerPushwooshAndroid();" >
+                        <input type="button" value="Desregistrar PUSH" style="width: 200px; height: 100px;" onclick="unregisterPushwoosh();" >
+                    -->
+			<!-- // Final info PhoneGap i PUSH -->
+			</div><!-- /content -->
+
+			<div class="footer">
+				<p>&copy; 2014 Grupo MTC.<br/>Programación y diseño: <a href="//www.hitech-informatica.es" target="_blank">HiTech Informàtica</a></p>
+			</div><!-- /jqm-footer -->
+			
+            
+				<div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="b">
+				<!--<div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a">-->
+
+					<ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+						<!--
+                        <li data-icon="delete" style="background-color:#111;">
+							<a href="#" data-rel="close">Volver</a>
+						</li>
+                        -->
+						<li>
+							<a href="index.html">Guang An Men</a>
+						</li>
+                        <li>
+							<a href="quienes.html">¿Quienes somos?</a>
+						</li>
+                        <li>
+							<a href="tratamientos.html">Tratamientos</a>
+						</li>
+                        <li>
+							<a href="promociones.html">Promociones</a>
+						</li>
+                        <li>
+							<a href="visita.html">Solicitar Visita</a>
+						</li>
+                        <li>
+							<a href="senseconnexio.html">¿Donde estamos?</a>
+						</li>
+                        <li>
+							<a href="contactar.html">Contactar</a>
+						</li>
+					</ul>
+
+					<!-- panel content goes here -->
+				</div><!-- /panel -->
+				
+		</div><!-- /page -->
+        
+        
+        
+	</body>
+</html>
