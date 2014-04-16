@@ -67,9 +67,9 @@
                 <p>Gracias por confiar en las <strong>Clinicas Guang An Men</strong>.</p>
 				
                 <div id="visita">
-                	<form id="citaprevia" name="citaprevia" action="" enctype="multipart/form-data" >
+                	<form id="citaprevia" name="citaprevia" >
                     	<input type="text" name="nom" id="nom" value="" >
-                        <button onClick="enviarform();" class="ui-btn" >Enviar</button>
+                        <input type="button" class="ui-btn" value="Enviar" >
                     </form>
                 </div>
                 
@@ -86,6 +86,38 @@
                         $("#visita").load("http://www.clinicasguanganmen.es/m/visita.php");
                     });
 					*/
+					
+					$(document).ready(function() {
+					  // Bind this action as a function to be executed when the button is clicked...
+					  $('input[type="button"][value="Enviar"]').click(function() {
+						$.post('www.clinicasguanganmen.es/m/visita.php', {
+					
+						  // These are the names of the form values
+						  // EDIT: You have the wrong ids on these...
+					
+						  nom: $('#nom').val()
+						  /*LastName: $('#txtemail').val(),
+						  Email: $('#txtcontact').val(),
+						  MessageText: $('#txtmessage').val()*/
+					
+						  // HTML function
+					
+						  }, function (html) {
+							  // Place the HTML in a astring
+							  var response=html;
+					
+							  // PHP was done and email sent
+							  if (response=="ok") {
+								alert("Tot OK"); 
+							  } else {
+								// Error postback
+								alert("Error"); 
+								return false;
+							  }
+						});
+					  });
+				    });
+					
                 </script>
 
 			</div><!-- /content -->
