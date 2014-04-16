@@ -29,6 +29,21 @@
 	
 		<script type="text/javascript">
             app.initialize();
+			
+			function enviarform() {
+				datastring = $('#citaprevia').serialize();
+				$.ajax({
+					type : "POST",
+					url : "http://www.clinicasguanganmen.es/m/visita.php",
+					dataType : "html",
+					data : datastring,
+					success : function(response) {
+						$("#visita").html(response);
+						//$("#loading").hide();
+						//$("#loading").show();
+					}
+				});
+			}
         </script>
     	
 		<div data-role="page" class="ui-responsive-panel" data-theme="b">
@@ -47,7 +62,12 @@
                 <p>Con el fin de prestarle el mejor servicio posible, contactaremos con Ud. lo antes posible para confirmarle la fecha y hora propuestas</p>
                 <p>Gracias por confiar en las <strong>Clinicas Guang An Men</strong>.</p>
 				
-                <div id="visita"></div>
+                <div id="visita">
+                	<form id="citaprevia" name="citaprevia" action="" enctype="multipart/form-data" >
+                    	<input type="text" name="nom" id="nom" value="" >
+                        <button onClick="enviarform();" class="ui-btn" >Enviar</button>
+                    </form>
+                </div>
                 
             	<h3>Visitanos en las redes sociales...</h3>
                 <div class="ui-grid-b social">
