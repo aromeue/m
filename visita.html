@@ -30,24 +30,28 @@
 		<script type="text/javascript">
             app.initialize();
 			
-			function enviarform() {
-				datastring = $('#citaprevia').serialize();
-				$("#visita").load("http://www.clinicasguanganmen.es/m/visita.php?nom=Alvaro");
-
-				/*
-				$.ajax({
-					type : "POST",
-					url : "http://www.clinicasguanganmen.es/m/visita.php",
-					dataType : "html",
-					data : datastring,
-					success : function(response) {
-						$("#visita").html(response);
-						//$("#loading").hide();
-						//$("#loading").show();
-					}
+			$(document).ready(function() {
+				  // Bind this action as a function to be executed when the button is clicked...
+				  $('input[type="button"][value="Enviar"]').click(function() {
+					$.post('http://www.clinicasguanganmen.es/m/visita.php', 
+					  $('#citaprevia').serialize() /* Array de valors del formulari */
+					  // HTML function
+					  , function (html) {
+						  // Place the HTML in a astring
+						  var response=html;
+						  // PHP was done and email sent
+						  if (response=="1") {
+							alert("Petición enviada!");
+							//$("#visita").html(XXXXXXXXXXXXXXXXXXXXXXXX);
+						  } else {
+							// Error postback
+							alert("Ha ocurrido un error!");
+							//$("#visita").html(XXXXXXXXXXXXXXXXXXXXXXXX);
+							return false;
+						  }
+					});
+				  });
 				});
-				*/
-			}
         </script>
     	
 		<div data-role="page" class="ui-responsive-panel" data-theme="b">
@@ -66,12 +70,26 @@
                 <p>Con el fin de prestarle el mejor servicio posible, contactaremos con Ud. lo antes posible para confirmarle la fecha y hora propuestas</p>
                 <p>Gracias por confiar en las <strong>Clinicas Guang An Men</strong>.</p>
 				
-                <div id="visita">
+                <div id="visita" style="display:none;">
                 	<form id="citaprevia" name="citaprevia" >
                     	<input type="text" name="nom" id="nom" value="" >
                         <input type="text" name="apellidos" id="apellidos" value="" >
                         <input type="button" class="ui-btn" value="Enviar" >
                     </form>
+                </div>
+                
+                <div id="citaonline">
+                  <div class="ui-grid-b">
+                    <div class="ui-block-a"><button id="bcn"><i class="fa-4x fa-medkit"></i> Barcelona</button></div>
+                    <div class="ui-block-b"><button id="madjj"><i class="fa-4x fa-medkit"></i> Madrid (JJ)</button></div>
+                    <div class="ui-block-c"><button id="madsh"><i class="fa-4x fa-medkit"></i> Madrid (SH)</button></div>
+                    <div class="ui-block-a"><button id="val"><i class="fa-4x fa-medkit"></i> Valencia</button></div>
+                    <div class="ui-block-b"><button id="ali"><i class="fa-4x fa-medkit"></i> Alicante</button></div>
+                    <div class="ui-block-c"><button id="stvi"><i class="fa-4x fa-medkit"></i> St. Vicent Raspeig</button></div>
+                    <div class="ui-block-a"><button id="elda"><i class="fa-4x fa-medkit"></i> Elda</button></div>
+                    <div class="ui-block-b"><button id="amp"><i class="fa-4x fa-medkit"></i> Amposta</button></div>
+                    <div class="ui-block-c"><button id="tgn"><i class="fa-4x fa-medkit"></i> Tarragona</button></div>
+                  </div>
                 </div>
                 
             	<h3>Visitanos en las redes sociales...</h3>
@@ -80,41 +98,6 @@
                     <div class="ui-block-b"><p><a href="https://twitter.com/@femtc"><i class="fa fa-twitter"></i> Twitter</a></p></div>
                     <div class="ui-block-c"><p><a href="https://www.youtube.com/user/FEMTC1"><i class="fa fa-youtube"></i> Youtube</a></p></div>
                 </div>
-                
-				<script type="text/javascript">
-				$(document).ready(function() {
-				  // Bind this action as a function to be executed when the button is clicked...
-				  $('input[type="button"][value="Enviar"]').click(function() {
-					$.post('http://www.clinicasguanganmen.es/m/visita.php', 
-					  $('#citaprevia').serialize() /* Array de valors del formulari */
-					
-					//{
-					  // These are the names of the form values
-					  // EDIT: You have the wrong ids on these...
-					  //nom: $('#nom').val(),
-					  //LastName: $('#txtemail').val(),
-					  //Email: $('#txtcontact').val(),
-					  //MessageText: $('#txtmessage').val()*/
-					  //}*/
-					  // HTML function
-					  , function (html) {
-						  // Place the HTML in a astring
-						  var response=html;
-						  // PHP was done and email sent
-						  $("#visita").html(response);
-						  /*
-						  if (response=="ok") {
-							alert("Tot OK"); 
-						  } else {
-							// Error postback
-							alert("Error"); 
-							return false;
-						  }
-						  */
-					});
-				  });
-				});
-                </script>
 
 			</div><!-- /content -->
 
