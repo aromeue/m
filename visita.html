@@ -26,14 +26,15 @@
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> <!-- Llibreria PhoneGap -->
         <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script> <!-- Llibreria plugin Push -->
         <script type="text/javascript" charset="utf-8" src="js/push.js"></script> <!-- Funcions PushWoosh -->
+
 		<script type="text/javascript">
             app.initialize();
-			var a = jQuery.noConflict();
-			a(document).ready(function() {
+
+			$(document).ready(function() {
 				  // Bind this action as a function to be executed when the button is clicked...
-				  a('input[type="button"][value="Enviar"]').click(function() {
-					a.post('http://www.clinicasguanganmen.es/m/visita.php', 
-					  a('#citaprevia').serialize() /* Array de valors del formulari */
+				  $('input[type="button"][value="Enviar"]').click(function() {
+					$.post('http://www.clinicasguanganmen.es/m/visita.php', 
+					  $('#citaprevia').serialize() /* Array de valors del formulari */
 					  // HTML function
 					  , function (html) {
 						  // Place the HTML in a astring
@@ -50,16 +51,14 @@
 						  }
 					});
 				  });
-				  
-				  
 				});
         </script>
-        
+    	
 		<div data-role="page" class="ui-responsive-panel" data-theme="b">
-		
+
 			<div data-role="header" data-position="fixed">
 				<h1>Clinicas Guang An Men</h1>
-				<a href="#nav-panel" data-icon="bars" class="ui-btn ui-btn-icon-left ui-icon-bars">Menu</a>
+				<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
                 <a href="tel:+34977703703" data-icon="phone" data-iconpos="notext">977 70 37 03</a>
                 <div id="slider"></div>
 			</div><!-- /header -->
@@ -70,8 +69,8 @@
                 <p>Puede solitar la fecha y hora que más le interese para acudir a nuestros centros a visitarse.</p>
                 <p>Con el fin de prestarle el mejor servicio posible, contactaremos con Ud. lo antes posible para confirmarle la fecha y hora propuestas</p>
                 <p>Gracias por confiar en las <strong>Clinicas Guang An Men</strong>.</p>
-				
-                <div id="visita">
+
+                <div id="visita" style="display:none;">
                 	<form id="citaprevia" name="citaprevia" >
                     	<input type="text" name="nom" id="nom" value="" >
                         <input type="text" name="apellidos" id="apellidos" value="" >
@@ -80,7 +79,7 @@
                 </div>
                 
                 <div id="citaonline">
-                  <div id="centros" class="ui-grid-b">
+                  <div class="ui-grid-b">
                     <div class="ui-block-a"><button id="bcn"><i class="fa fa-4x fa-medkit"></i><br />Barcelona</button></div>
                     <div class="ui-block-b"><button id="madjj"><i class="fa fa-4x fa-medkit"></i><br />Madrid (JJ)</button></div>
                     <div class="ui-block-c"><button id="madsh"><i class="fa fa-4x fa-medkit"></i><br />Madrid (SH)</button></div>
@@ -90,20 +89,6 @@
                     <div class="ui-block-a"><button id="elda"><i class="fa fa-4x fa-medkit"></i><br />Elda</button></div>
                     <div class="ui-block-b"><button id="amp"><i class="fa fa-4x fa-medkit"></i><br />Amposta</button></div>
                     <div class="ui-block-c"><button id="tgn"><i class="fa fa-4x fa-medkit"></i><br />Tarragona</button></div>
-                  </div>
-                  <div id="especialidades" class="ui-grid-b" style="display:none;">
-                  	<div class="ui-block-a"><button id="primvist"><i class="fa fa-4x fa-medkit"></i><br />Primera visita</button></div>
-                    <div class="ui-block-b"><button id="acupu"><i class="fa fa-4x fa-medkit"></i><br />Acupuntura</button></div>
-                    <div class="ui-block-c"><button id="fisiot"><i class="fa fa-4x fa-medkit"></i><br />Fisioterapia</button></div>
-                  </div>
-                  <div id="doctor" class="ui-grid-b" style="display:none;">
-                  	<div class="ui-block-a"><button id="nata"><i class="fa fa-4x fa-medkit"></i><br />Dra. Natasha</button></div>
-                    <div class="ui-block-b"><button id="ma"><i class="fa fa-4x fa-medkit"></i><br />Dra. Ma</button></div>
-                    <div class="ui-block-c"><button id="liu"><i class="fa fa-4x fa-medkit"></i><br />Dr. Liu</button></div>
-                  </div>
-                  <div id="horas" class="ui-grid-b" style="display:none;">
-                  	
-                    
                   </div>
                 </div>
                 
@@ -119,7 +104,7 @@
 			<div class="footer">
 				<p>&copy; 2014 Grupo MTC.<br/>Programación y diseño: <a href="//www.hitech-informatica.es" target="_blank">HiTech Informàtica</a></p>
 			</div><!-- /jqm-footer -->
-			
+
             
 				<div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="b">
 				<!--<div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a">-->
