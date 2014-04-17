@@ -1,85 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Clinicas Guang An Men</title>
-        
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <!-- width=device-width, height=device-height, -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
-        
-        <link rel="stylesheet" href="css/estils.css" />  <!-- Estils propis -->
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> <!-- FontAwesome -->
-        
-        <!-- Estils i Javascripts de JQuery -->
-            <link rel="stylesheet" href="themes/clinicas.min.css" />
-            <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
-            <script src="js/jquery.min.js"></script>
-            <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-        <!--//          -->
-	</head>
-    
-	<body>
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script> <!-- Llibreria PhoneGap -->
-        <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script> <!-- Llibreria plugin Push -->
-        <script type="text/javascript" charset="utf-8" src="js/push.js"></script> <!-- Funcions PushWoosh -->
-    <div data-role="page" class="ui-responsive-panel" data-theme="b">
-    	<script type="text/javascript">
-            //app.initialize();
 
-			$(document).ready(function() {
-				  // Bind this action as a function to be executed when the button is clicked...
-				  $('input[type="button"][value="Enviar"]').click(function() {
-					$.post('http://www.clinicasguanganmen.es/m/visita.php', 
-					  $('#citaprevia').serialize() /* Array de valors del formulari */
-					  // HTML function
-					  , function (html) {
-						  // Place the HTML in a astring
-						  var response=html;
-						  // PHP was done and email sent
-						  if (response=="1") {
-							alert("Petición enviada!");
-							//$("#visita").html(XXXXXXXXXXXXXXXXXXXXXXXX);
-						  } else {
-							// Error postback
-							alert("Ha ocurrido un error!");
-							//$("#visita").html(XXXXXXXXXXXXXXXXXXXXXXXX);
-							return false;
-						  }
-					});
-				  });
-				 
-				 $('#centros button').click(function() {
-						centro=this.id;
-						alert("Centro: "+centro);
-						$("#centros").hide('slow',function() {
-							$("#especialidades").show('slow');
-						});
-					});
-					
-					$('#especialidades button').click(function() {
-						espec=this.id;
-						alert("Especialidades: "+espec);
-						$("#especialidades").hide('slow',function() {
-							$("#doctor").show('slow');
-						});
-					});
-					
-					$('#doctor button').click(function() {
-						doctor=this.id;
-						alert("Doctor: "+espec);
-						$("#doctor").hide('slow',function() {
-							$("#horas").show('slow',function() {
-								//$("#horas").innerHTML("hola"+centro+espec+doctor);
-							});
-						});
-					});
-				 
-			});
-        </script>
+    <div data-role="page" class="ui-responsive-panel" data-theme="b">
+
         
         
 		
@@ -185,5 +106,4 @@
 				</div><!-- /panel -->
 		
 		</div><!-- /page -->
-	</body>
-</html>
+	
