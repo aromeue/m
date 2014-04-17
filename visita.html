@@ -28,12 +28,12 @@
         <script type="text/javascript" charset="utf-8" src="js/push.js"></script> <!-- Funcions PushWoosh -->
 		<script type="text/javascript">
             app.initialize();
-			
-			$(document).ready(function() {
+			var a = jQuery.noConflict();
+			a(document).ready(function() {
 				  // Bind this action as a function to be executed when the button is clicked...
-				  $('input[type="button"][value="Enviar"]').click(function() {
-					$.post('http://www.clinicasguanganmen.es/m/visita.php', 
-					  $('#citaprevia').serialize() /* Array de valors del formulari */
+				  a('input[type="button"][value="Enviar"]').click(function() {
+					a.post('http://www.clinicasguanganmen.es/m/visita.php', 
+					  a('#citaprevia').serialize() /* Array de valors del formulari */
 					  // HTML function
 					  , function (html) {
 						  // Place the HTML in a astring
