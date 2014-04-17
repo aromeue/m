@@ -1,8 +1,56 @@
 
     <div data-role="page" class="ui-responsive-panel" data-theme="b">
-
-        
-        
+<script type="text/javascript">
+        			$(document).ready(function() {
+				  // Bind this action as a function to be executed when the button is clicked...
+				  $('input[type="button"][value="Enviar"]').click(function() {
+					$.post('http://www.clinicasguanganmen.es/m/visita.php', 
+					  $('#citaprevia').serialize() /* Array de valors del formulari */
+					  // HTML function
+					  , function (html) {
+						  // Place the HTML in a astring
+						  var response=html;
+						  // PHP was done and email sent
+						  if (response=="1") {
+							alert("Petición enviada!");
+							//$("#visita").html(XXXXXXXXXXXXXXXXXXXXXXXX);
+						  } else {
+							// Error postback
+							alert("Ha ocurrido un error!");
+							//$("#visita").html(XXXXXXXXXXXXXXXXXXXXXXXX);
+							return false;
+						  }
+					});
+				  });
+				 
+				 $('#centros button').click(function() {
+						centro=this.id;
+						alert("Centro: "+centro);
+						$("#centros").hide('slow',function() {
+							$("#especialidades").show('slow');
+						});
+					});
+					
+					$('#especialidades button').click(function() {
+						espec=this.id;
+						alert("Especialidades: "+espec);
+						$("#especialidades").hide('slow',function() {
+							$("#doctor").show('slow');
+						});
+					});
+					
+					$('#doctor button').click(function() {
+						doctor=this.id;
+						alert("Doctor: "+espec);
+						$("#doctor").hide('slow',function() {
+							$("#horas").show('slow',function() {
+								//$("#horas").innerHTML("hola"+centro+espec+doctor);
+							});
+						});
+					});
+				 
+			});
+        </script>
 		
 
 			<div data-role="header" data-position="fixed">
