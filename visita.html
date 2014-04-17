@@ -75,10 +75,12 @@
 				
 				$("#doctor").ready(function() {
                     $('#doctor button').click(function() {
-                        espec=this.id;
+                        doctor=this.id;
 						alert("Doctor: "+espec);
 						$("#doctor").hide('slow',function() {
-							$("#horas").show('slow');
+							$("#horas").show('slow',function() {
+								$("#horas").innerHTML("hola"+centro+espec+doctor);
+							});
 						});
                     });
                 });
