@@ -51,31 +51,6 @@
 					});
 				  });
 				  
-					$('#centros button').click(function() {
-						centro=this.id;
-						alert("Centro: "+centro);
-						$("#centros").hide('slow',function() {
-							$("#especialidades").show('slow');
-						});
-					});
-					
-					$('#especialidades button').click(function() {
-						espec=this.id;
-						alert("Especialidades: "+espec);
-						$("#especialidades").hide('slow',function() {
-							$("#doctor").show('slow');
-						});
-					});
-					
-					$('#doctor button').click(function() {
-						doctor=this.id;
-						alert("Doctor: "+espec);
-						$("#doctor").hide('slow',function() {
-							$("#horas").show('slow',function() {
-								//$("#horas").innerHTML("hola"+centro+espec+doctor);
-							});
-						});
-					});
 				  
 				});
         </script>
