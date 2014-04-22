@@ -24,7 +24,7 @@
 				 
 				 $('#centros button').click(function() {
 						centro=this.id;
-						alert("Centro: "+centro);
+						//alert("Centro: "+centro);
 						$("#centros").hide('slow',function() {
 							$("#especialidades").show('slow');
 						});
@@ -32,7 +32,7 @@
 					
 					$('#especialidades button').click(function() {
 						espec=this.id;
-						alert("Especialidades: "+espec);
+						//alert("Especialidades: "+espec);
 						$("#especialidades").hide('slow',function() {
 							$("#doctor").show('slow');
 						});
@@ -40,7 +40,7 @@
 					
 					$('#doctor button').click(function() {
 						doctor=this.id;
-						alert("Doctor: "+espec);
+						//alert("Doctor: "+doctor);
 						$("#doctor").hide('slow',function() {
 							$("#horas").show('slow',function() {
 								//$("#horas").innerHTML("hola"+centro+espec+doctor);
@@ -66,7 +66,7 @@
                 <p>Con el fin de prestarle el mejor servicio posible, contactaremos con Ud. lo antes posible para confirmarle la fecha y hora propuestas</p>
                 <p>Gracias por confiar en las <strong>Clinicas Guang An Men</strong>.</p>
 
-                <div id="visita">
+                <div id="visita" style="display:none;">
                 	<form id="citaprevia" name="citaprevia" >
                     	<input type="text" name="nom" id="nom" value="" >
                         <input type="text" name="apellidos" id="apellidos" value="" >
