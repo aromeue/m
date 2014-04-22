@@ -26,6 +26,39 @@
 						centro=this.id;
 						//alert("Centro: "+centro);
 						$("#centros").hide('slow',function() {
+							//Preparem el DIV ESPECIALIDADES
+							switch(centro) {
+								case "bcn":
+									$("#especialidades").innerHTML='<div class="ui-block-a"><button id="primvist"><i class="fa fa-4x fa-medkit"></i><br />Primera visita</button></div>'
+																  +'<div class="ui-block-b"><button id="acupu"><i class="fa fa-4x fa-medkit"></i><br />Acupuntura</button></div>'
+																  +'<div class="ui-block-c"><button id="fisiot"><i class="fa fa-4x fa-medkit"></i><br />Fisioterapia</button></div>';
+								break;
+								case "madjj":
+									$("#especialidades").innerHTML='';
+								break;
+								case "madsh":
+									$("#especialidades").innerHTML='';
+								break;
+								case "val":
+									$("#especialidades").innerHTML='';
+								break;
+								case "ali":
+									$("#especialidades").innerHTML='';
+								break;
+								case "stvi":
+									$("#especialidades").innerHTML='';
+								break;
+								case "elda":
+									$("#especialidades").innerHTML='';
+								break;
+								case "amp":
+									$("#especialidades").innerHTML='';
+								break;
+								case "tgn":
+									$("#especialidades").innerHTML='';
+								break;
+							}								
+							
 							$("#especialidades").show('slow');
 						});
 					});
@@ -34,6 +67,9 @@
 						espec=this.id;
 						//alert("Especialidades: "+espec);
 						$("#especialidades").hide('slow',function() {
+							//Preparem DIV DOCTOR
+							//$("#doctor").innerHTML='';
+							
 							$("#doctor").show('slow');
 						});
 					});
@@ -86,11 +122,9 @@
                     <div class="ui-block-b"><button id="amp"><i class="fa fa-4x fa-medkit"></i><br />Amposta</button></div>
                     <div class="ui-block-c"><button id="tgn"><i class="fa fa-4x fa-medkit"></i><br />Tarragona</button></div>
                   </div>
-                  <div id="especialidades" class="ui-grid-b" style="display:none;">
-                  	<div class="ui-block-a"><button id="primvist"><i class="fa fa-4x fa-medkit"></i><br />Primera visita</button></div>
-                    <div class="ui-block-b"><button id="acupu"><i class="fa fa-4x fa-medkit"></i><br />Acupuntura</button></div>
-                    <div class="ui-block-c"><button id="fisiot"><i class="fa fa-4x fa-medkit"></i><br />Fisioterapia</button></div>
-                  </div>
+                  
+                  <div id="especialidades" class="ui-grid-b" style="display:none;"> </div>
+                  
                   <div id="doctor" class="ui-grid-b" style="display:none;">
                   	<div class="ui-block-a"><button id="nata"><i class="fa fa-4x fa-medkit"></i><br />Dra. Natasha</button></div>
                     <div class="ui-block-b"><button id="ma"><i class="fa fa-4x fa-medkit"></i><br />Dra. Ma</button></div>
